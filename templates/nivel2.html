@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel 2</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+</head>
+
+<body class="{% if recognizing %}recognizing{% endif %}" >
+    <header class="header_nivel2">
+        <a  href="inicio.html" class="button-volver">Volver al Inicio</a>
+        <h1 class="puntaje">Puntaje: {{score}}</h1>
+        <h1 class="header_niveles__text">Nivel Intermedio</h1>
+        
+        
+    </header>
+
+    
+    
+
+    {%block content%}
+
+    
+    
+
+    {%if word%}
+        <h1 class="word_random">{{word}}</h1>
+        <form class="word_random" id="recognize-form" action="{{ url_for('recognize') }}" method="POST">
+            <input type="hidden" name="correct_word" value="{{ word }}">
+            <button  type="submit" class="pronunciar">Pronunciar</button>
+        </form>
+        <form id="submit-form" action="{{ url_for('voices') }}" method="POST" style="display:none;">
+            <input type="hidden" name="correct_word" value="{{ word }}">
+        </form>
+
+    {% else %}
+
+        <form action="{{ url_for('mostrar') }}" method="POST">
+            <button type="submit" class="palabra-button">Obtener una palabra</button>
+        </form>
+
+    {% endif %}
+    {% if spoken_word %}
+
+        <h1 style="color:rgb(136, 224, 48)" class="palabra-pronunciada">Correcto! Era: {{ spoken_word }}</h1>
+
+    {% endif %}
+
+    {% if tips %}
+        <p class ="tips">Un pequeño tip para tí: {{tips}}</p>
+
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">Error: {{ error }}</p>
+    {% endif %}
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <p>Reconociendo... Por favor, espere 3 segundos y hable.</p>
+        </div>
+    </div>
+
+    <!-- Auto-submit script -->
+    {% if recognizing %}
+        <script>
+            setTimeout(function() {document.getElementById('submit-form').submit();}, 500); 
+        </script>
+    {% endif %}
+
+    {%endblock%}
+</body>
+</html>

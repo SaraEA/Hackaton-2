@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Game Over!</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    <header class="header_final">
+    <a  href="/" class="button-volver-final">Volver al Inicio</a>
+    <h1 class="header_final__text">¡Felicidades!</h1>
+    </header>
+    <main class="pagina-final">
+
+
+{% block content %}
+    
+    <h2 class="final">🎉🎊 Completaste este Eco-juego 🎊🎉</h2>       
+    <div>
+        <p class="resultados">Este fue tu puntaje: {{score}} puntos! 
+        <p class="resultados">Estas fueron la cantidad de intentos: {{intentos}} </p>
+        <p class="resultados">Tuviste {{correcto}} palabras correctas! </p>
+    </div>
+
+    <div style="text-align:center">
+        <p class="info">Si quieres saber más sobre el medio ambiente y como ayudar a disminuir el cambio climatico haz click aquí!</p>
+        <a href="https://www.un.org/en/climatechange" class="mas_info_button">Saber más...</a>
+    </div>
+
+{% endblock %}
+</main>
+</body>
+</html>
