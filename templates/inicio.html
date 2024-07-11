@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <title> 🌱 Eco-Juego 🌱</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>¡Bienvenido a este Eco-Juego!</h1>
+     
+      <p>Este es un juego de pronunciación en ingles que consiste en 4 niveles. Aquí encontrarás multiples palabras que deberás pronunciar correctamente para lograr el mayor puntaje. ¡Buena suerte!</p>
+
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <h2 class="main__title">Selecciona el nivel que deseas jugar:</h2>
+    <ul class="list">
+      <li class="list__item">
+        <a href="/1">
+        <img class="item__img" src="{{url_for('static', filename='img/Nivel_1.png')}}" alt="nivel">
+        <span>Nivel Fácil</span></a>
+      </li>
+      <!-- Asignación #1 -->
+      <li class="list__item">
+        <a href="/2">
+        <img class="item__img" src="{{url_for('static', filename='img/Nivel_2.png')}}" alt="nivel">
+        <span>Nivel Intermedio</span></a>
+      </li>
+      <li class="list__item">
+        <a href="/3">
+        <img class="item__img" src="{{url_for('static', filename='img/Nivel_3.png')}}" alt="nivel">
+        <span>Nivel Difícil</span></a>
+      <!--  -->
+      </li>
+      <li class="list__item">
+        <a href="/4">
+        <img class="item__img" src="{{url_for('static', filename='img/Nivel_4.png')}}" alt="nivel">
+        <span>Nivel Experto</span></a>
+      </li>
+    </ul>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
