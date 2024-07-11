@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+
+}
+
+h1, h2 {
+    margin: 10px;
+    font-size: 45px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+p {
+    margin:20px;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: left;
+    background-color: #69c989a7;
+    padding: 10vh 10px;
+    margin-bottom: 0px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:url("../img/imagen_fondo.webp");
+}
+
+
+.header__text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 800px;
+    text-align: center;
+}
+
+.header__text {
+    animation-name: bounce;
+    animation-duration: 2.5s;
+    animation-iteration-count:3;
+}
+
+@keyframes bounce {
+    
+    0%, 100% {
+
+        transform: translateY(0); /* Estado inicial y final: sin desplazamiento vertical */
+  
+      }
+  
+      50% {
+  
+        transform: translateY(-30px); /* Pico del rebote: desplazamiento hacia arriba */
+  
+      }
+}
+
+.header_nivel1 {
+    background-color: #ecdc27;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+}
+.header_nivel2 {
+    background-color: #ecb127;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+}
+.header_nivel3 {
+    background-color: #ec8927;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+}
+.header_nivel4 {
+    background-color: #db3b22;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+}
+
+.header_final {
+    background-color: #1bdf2e;
+    text-align: center;
+    height: 130px;
+    padding-top: 20px;
+}
+
+.header_niveles__text{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 35px;
+}
+
+.header_final__text {
+    float: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 70px;
+    margin-top:40px;
+    margin-left:190px
+}
+
+.puntaje {
+    float: left;
+    text-align: left;
+    height: 12px;
+    font-size:30px;
+    
+}
+
+.tips {
+    padding-top: 15px;
+    padding-bottom:15px;
+    margin:20px;
+    font-size: 19px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:center;
+}
+
+
+.final {
+    margin:100px;
+    text-align: center;
+    font-size:40px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pagina-final {
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-image: url(".../img/bg_final.webp");
+}
+
+.resultados {
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.palabra-pronunciada {
+    margin-top: 300;
+    text-align:center;
+    font-size:60px;
+}
+
+.word_random {
+    
+    text-align:center;
+    font-size:100px;
+    padding-top: 200px;
+    margin-top:300px;
+    margin-left:500px
+}
+
+.info {
+    margin-top:110px;
+    text-align:center;
+    font-size:25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mas_info_button {
+    margin-top: 50px;
+    background: #1750d7;
+    float: center;
+    padding: 1vh 10px;
+    border-radius: 5px;
+    height: 40x;
+    width: 140px;
+    cursor: pointer;
+    font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color:#fff;
+}
+
+.mas_info_button:hover {
+    box-shadow: 1px 1px 4px 4px #0d038f;
+}
+
+.button-volver {
+    float: right;
+    padding: 1vh 10px;
+    align-items: right;
+    background: #e06a09;
+    margin-right:15px;
+    border-radius: 5px;
+    height: 40x;
+    width: 140px;
+    cursor: pointer;
+    text-align:right;
+    font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color:#fff
+}
+
+.button-volver-final {
+    float: right;
+    padding: 1vh 10px;
+    align-items: right;
+    background: #e4230d;
+    margin-top:35px;
+    margin-right:15px;
+    border-radius: 5px;
+    height: 40x;
+    width: 140px;
+    cursor: pointer;
+    text-align:right;
+    font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color:#fff
+
+}
+
+main {
+    padding: 40px 50px 170px;
+    background-repeat:no-repeat;
+    background-position: left;
+    background-color: #00000000;
+    padding: 10vh 10px;
+    margin-bottom: 0px;
+    display:flex;
+    flex-direction: column;
+}
+
+.main__title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.list__item a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid #c44008;
+    background-color:rgb(208, 124, 50);
+    transition: 0.2s;
+}
+
+.item__img {
+    object-fit: contain;
+    width: 150px;
+}
+
+.list__item a:hover {
+    box-shadow: 1px 1px 4px 4px #e40905;
+}
+
+.img_inicial {
+    margin:0;
+    align-items: left;
+}
+
+.word_random{
+    margin: 20px;
+}
+
+.pronunciar {
+    float:center;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #0eb016;
+    font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    color: #fff;
+    height: 45px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.palabra-button{
+    display:block;
+    padding: 1vh 10px;
+    margin-left: 850px;
+    margin-right: 600px;
+    margin-top: 150px ;
+    margin-bottom:530px;
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: none;
+    background: #0eb016;
+    font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    color: #fff;
+    height: 65px;
+    width: 200px;
+    font-size: 20px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { 
+
+        transform:scale(0.95);
+
+        box-shadow: 0 0 0 0 rgb(102, 238, 4);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 30px rgba(26, 244, 121, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(26, 51, 244, 0);
+    }
+}
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+/* Mostrar el modal si se está reconociendo */
+body.recognizing .modal {
+    display: block;
+}
